@@ -4,6 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfigPaso1">
+    tools:context=".ConfigPaso1"
+    android:background="#78c800">
 
+    <RelativeLayout
+        android:layout_width="369dp"
+        android:layout_height="624dp"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="47dp"
+            android:gravity="center_horizontal"
+            android:text="BIENVENIDO"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="110dp"
+            android:gravity="center_horizontal"
+            android:text="Por favor ingrese su nombre completo"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="267dp"
+            android:text="Ingrese su correo"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/continuar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="161dp"
+            android:backgroundTint="#f8f200"
+            android:drawableLeft="@drawable/iconcontinuar"
+            android:text="CONTINUAR"
+            android:textColor="#ffffff"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="206dp"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:shadowColor="#ffffff"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="247dp"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="Correo"
+            android:inputType="textPersonName"
+            android:shadowColor="#ffffff"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

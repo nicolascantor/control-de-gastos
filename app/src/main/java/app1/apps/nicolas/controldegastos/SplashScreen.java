@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 
-                SharedPreferences primerIngreso = getSharedPreferences("primerIngreso", Context.MODE_PRIVATE);
+                /*SharedPreferences primerIngreso = getSharedPreferences("primerIngreso", Context.MODE_PRIVATE);
                 String verificacion = primerIngreso.getString("primerIngreso", "primera vez");
 
                 if(verificacion=="primera vez"){
@@ -29,7 +29,7 @@ public class SplashScreen extends AppCompatActivity {
                     editor.putString("primera vez", "versio 1.0.0 accedido xjhfhdsls354fg4srg");
                     editor.commit();
 
-                    Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                    Intent intent = new Intent(SplashScreen.this, ConfigPaso1.class);
                     startActivity(intent);
 
                 }else {
@@ -37,12 +37,13 @@ public class SplashScreen extends AppCompatActivity {
                     Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(intent);
 
-                }
+                }*/
 
-
+                Intent intent = new Intent(SplashScreen.this, ConfigPaso1.class);
+                startActivity(intent);
 
             }
-        }, 6000);
+        }, 3000);
 
 
 
