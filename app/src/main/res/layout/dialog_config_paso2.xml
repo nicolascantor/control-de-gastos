@@ -37,7 +37,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="197dp"
             android:ems="10"
-            android:hint="Valor" />
+            android:hint="Valor"
+            android:inputType="numberDecimal"/>
 
         <Button
             android:id="@+id/btnNuevoValor"

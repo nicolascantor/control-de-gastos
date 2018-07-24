@@ -18,21 +18,20 @@ public class ConfigPaso2 extends AppCompatActivity implements CuadroDialogoNuevo
     Context contexto;
     TextView nombreIngresado, valorIngresado;
     ListView list;
-    ArrayAdapter<String> adapter;
-    ArrayList<String> arrayList;
+    ArrayList<Ingreso> ingreso;
+    ListView lv;
+    AdapterIngreso adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config_paso2);
 
-        list = (ListView) findViewById(R.id.listaIngresos);
+        ingreso = new ArrayList<Ingreso>();
+        lv = (ListView) findViewById(R.id.listaIngresos);
+        adapter = new AdapterIngreso(this, ingreso);
 
-        arrayList = new ArrayList<String>();
-
-        adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.spinner_item_layout, arrayList);
-        list.setAdapter(adapter);
-
+        lv.setAdapter(adapter);
 
         contexto = this;
 
@@ -53,9 +52,8 @@ public class ConfigPaso2 extends AppCompatActivity implements CuadroDialogoNuevo
     @Override
     public void resultadoCuadroDialogo(String nombre, String valor) {
 
-        //nombreIngresado.setText(nombre);
-        //valorIngresado.setText(valor);
-        arrayList.add(nombre);
+        Ingreso ingresoNuevo = new Ingreso(nombre, valor);
+        ingreso.add(ingresoNuevo);
         adapter.notifyDataSetChanged();
 
     }
