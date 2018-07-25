@@ -1,23 +1,19 @@
 package app1.apps.nicolas.controldegastos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class ConfigPaso2 extends AppCompatActivity implements CuadroDialogoNuevoValor.finalizoCuadroDialgo{
 
     Context contexto;
-    TextView nombreIngresado, valorIngresado;
-    ListView list;
     ArrayList<Ingreso> ingreso;
     ListView lv;
     AdapterIngreso adapter;
@@ -36,7 +32,9 @@ public class ConfigPaso2 extends AppCompatActivity implements CuadroDialogoNuevo
         contexto = this;
 
 
-        Button agregarIngreso = findViewById(R.id.btnAgregarMas);
+        Button agregarIngreso = (Button) findViewById(R.id.btnAgregarMas);
+
+        Button guardarIngreso = (Button) findViewById(R.id.btnGuardarIngresos);
 
         agregarIngreso.setOnClickListener(new View.OnClickListener(){
 
@@ -44,6 +42,14 @@ public class ConfigPaso2 extends AppCompatActivity implements CuadroDialogoNuevo
             public void onClick(View v) {
 
                 new CuadroDialogoNuevoValor(contexto, ConfigPaso2.this);
+            }
+        });
+
+        guardarIngreso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConfigPaso2.this, ConfigPaso3.class);
+                startActivity(intent);
             }
         });
     }

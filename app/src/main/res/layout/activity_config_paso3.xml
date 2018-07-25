@@ -4,6 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#78c800"
     tools:context=".ConfigPaso3">
 
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/textTituloConfig3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:text="Por favor suministre los datos de los egresos mensuales actuales."
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="monospace" />
+
+        <Button
+            android:id="@+id/btnAgregarEgre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="143dp"
+            android:backgroundTint="#f8f200"
+            android:textColor="@android:color/white"
+            android:text="Agregar" />
+
+        <ListView
+            android:id="@+id/listaEgresos"
+            android:layout_width="match_parent"
+            android:layout_height="273dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="78dp" />
+
+        <Button
+            android:id="@+id/btnGuardadEgre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:backgroundTint="#f8f200"
+            android:textColor="@android:color/white"
+            android:text="Guardar" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

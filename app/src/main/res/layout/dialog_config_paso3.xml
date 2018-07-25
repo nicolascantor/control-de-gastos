@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="275dp"
+        android:layout_height="400dp"
+        android:background="#ffffff"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="48dp">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#C8C9CB" />
+
+        <EditText
+            android:id="@+id/nombreNuevoEgreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="62dp"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/nuevoEgresoValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="116dp"
+            android:ems="10"
+            android:hint="Valor"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/btnNuevoEgreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="52dp"
+            android:backgroundTint="#78c800"
+            android:text="Aceptar" />
+
+        <TextView
+            android:id="@+id/tituloEgresoNuevo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="11dp"
+            android:text="Nuevo egreso:"
+            android:textSize="25dp" />
+
+        <CheckBox
+            android:id="@+id/checkFijo"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nombreNuevoEgreso"
+            android:layout_below="@+id/nuevoEgresoValor"
+            android:text="Fijo" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/nombreNuevoValor"
+            android:layout_marginBottom="160dp"
+            android:text="Un egreso es fijo cuando el valor mensual no cambia" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
